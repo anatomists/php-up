@@ -30,7 +30,11 @@ return [
                 ],
             ],
         ],
-       
+      
+      
+        'stringHelper' => [
+            'class' => 'frontend\components\stringHelper',
+        ] 
     ],
     
     'params' => $params,

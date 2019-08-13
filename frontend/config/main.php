@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'ru',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -43,6 +44,10 @@ return [
                 'news' => 'test/index',
                 'news/<id:\d+>' => 'test/view',
             ],
+
+        ],
+        'stringHelper' => [
+            'class' => 'frontend\components\StringHelper',
         ],
         'mailer' => [
     'class' => 'yii\swiftmailer\Mailer',
@@ -54,8 +59,8 @@ return [
         'password' => 'Aminazin123',
         'port' => '465',
         'encryption' => 'ssl',
-    ],
-],
+            ],
+        ],
         
     ],
     'params' => $params,

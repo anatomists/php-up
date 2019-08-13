@@ -9,18 +9,19 @@ use frontend\models\Test;
 /**
  * 
  */
+
 class TestController extends Controller
 {
 	
-	public function actionIndex()
+	public function actionIndex($max = 20)
 	{
-		$list = Test::getNewsList();
+		$max = Yii::$app->params['maxNewsInList'];
+		$list = Test::getNewsList($max);
 
-		
-		return $this->render('index', [
+		return $this->render('index',[
 			'list' => $list,
-
-		]);
+		]
+	);
 	}
 
 	public function actionView ($id)
