@@ -33,7 +33,7 @@ return [
       
       
         'stringHelper' => [
-            'class' => 'frontend\components\stringHelper',
+            'class' => 'common\components\stringHelper',
         ] 
     ],
     
